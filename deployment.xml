@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<deployment>
+    <cluster sitesperhost="4" kfactor="0" schema="ddl"/>
+    <topics>
+        <topic name="NewJob" procedure="NewJob" />
+		<topic name="NewAgent" procedure="NewAgent" />
+		<topic name="NewZone" procedure="NewZone" />
+		<topic name="NewRegion" procedure="NewRegion" />
+    </topics>
+    <export>
+   	<configuration enabled="true" target="ManagerReport" type="file">
+     <property name="type">csv</property>
+     <property name="nonce">ManagerReport</property>
+  	</configuration>
+   </export>
+</deployment>
